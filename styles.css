@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Noto Sans JP", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Noto Sans JP, monospace;
+}
+
+.all {
+  width: 80%;
+  margin: 0 auto 5rem auto;
+}
+
+.pp {
+  width: 15rem;
+  margin: 2rem auto;
+}
+
+.pp img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 0.75rem #000);
+  box-shadow: 0 0 0.75rem #000;
+}
+
+.pp:hover img {
+  transform: scale(0.9) !important;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.part {
+  border: 1px solid #383737;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0rem 1.5rem;
+  background: -webkit-linear-gradient(rgb(22, 22, 22), #000000);
+}
+
+.part h2 {
+  text-align: center;
+  background: -webkit-linear-gradient(left, #a6a6a6, #2d2d2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  transition: all 2s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+}
+
+a .project {
+  filter: brightness(0.5) saturate(0%);
+  transition: all 0.3s ease;
+}
+
+a:hover .project {
+  filter: none;
+}
+
+a:hover .part h2 {
+  background: -webkit-linear-gradient(left, #eee, #a1a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.last {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+
+.last p {
+  background: -webkit-linear-gradient(left, #a6a6a6, #595959);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 0.8rem;
+}
+
+a:hover .last p {
+  background: -webkit-linear-gradient(left, #eee, #a1a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1020px) {
+  .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .pp {
+    width: 10rem;
+  }
+  .all {
+    width: 90%;
+  }
+}
